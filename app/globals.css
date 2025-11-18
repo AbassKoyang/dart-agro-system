@@ -3,6 +3,7 @@
 
 @theme {
   --color-primary-green: rgba(207, 243, 75, 1);
+  --color-primary-black: rgba(18, 18, 18, 1);
   --font-dm-mono: "DM Mono", monospace;
 
 }

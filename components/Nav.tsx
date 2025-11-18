@@ -2,7 +2,6 @@
 import { useTransitionRouter } from "next-view-transitions";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { TextAlignJustify, X } from "lucide-react";
 import { useStore } from "@/hooks/useStore";
 import { useGSAP } from "@gsap/react";
 import { useRef } from "react";
@@ -13,7 +12,6 @@ const Nav = () => {
     const headerRef = useRef<HTMLElement>(null);
     const isOpen = useStore((state) => state.isOpen)
     const setIsOpen = useStore((state) => state.setIsOpen)
-    const toggleIsOpen = useStore((state) => state.toggleIsOpen)
 
     const router = useTransitionRouter();
     const pathname = usePathname();
@@ -49,19 +47,45 @@ const Nav = () => {
     pseudoElement: "::view-transition-new(root)"
 })}
 
-useGSAP(()=> {
-    gsap.from('.nav-link', {
+useGSAP(() => {
+    if (isOpen) {
+      gsap.from('.nav-link', {
         y: 50,
         x: 50,
         opacity: 0,
-        duration: 1,
-        stagger: 0.25,
-        ease: 'power2.inOut'
-    })
-}, {scope: headerRef, dependencies: [isOpen]})
+        duration: 0.8,
+        stagger: 0.2,
+        ease: 'power2.inOut',
+      });
+    }
+  }, { scope: headerRef, dependencies: [isOpen] });
+  
+
+const handleMenuClick = () => {
+    if (isOpen) {
+        const tl = gsap.timeline()
+      tl.to('.nav-link', {
+        y: 100,
+        x: 150,
+        opacity: 0,
+        duration: 0.8,
+        stagger: 0.2,
+        ease: 'power2.out',
+      });
+      tl.to('#nav-links-con', {
+        opacity: 0,
+        duration: 0.3,
+        ease: 'power2.out',
+        onComplete: () => setIsOpen(false)
+      });
+    } else {
+      setIsOpen(true);
+    }
+  };
+
 
   return (
-    <header ref={headerRef} className="w-full  fixed top-0 left-0 z-20">
+    <header ref={headerRef} className="w-full  fixed top-0 left-0 z-[1000]">
         <div className="w-full fixed top-0 left-0 flex items-center justify-between z-30 py-6 px-5 bg-white/30 backdrop-blur-md">
         <Link className="flex gap-2 items-center" href={'/'}>
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -72,19 +96,59 @@ useGSAP(()=> {
             <h6 className="text-[16px] font-dm-mono text-white font-normal">DartAgro System</h6>
         </Link>
 
-        <button onClick={toggleIsOpen} className="flex justify-center gap-1 flex-col cursor-pointer">
-            <div className={`${isOpen ? '-rotate-45' : 'rotate-0'} w-[20px] h-[2px] rounded-lg bg-white transition-all duration-500 ease-in-out`}></div>
-            <div className={`${isOpen ? 'rotate-45' : 'rotate-0'} w-[20px] h-[2px] rounded-lg bg-white transition-all duration-500 ease-in-out`}></div>
-            <div className={`${isOpen ? 'opacity-0' : 'opacity-100'} w-[20px] h-[2px] rounded-lg bg-white transition-all duration-500 ease-in-out`}></div>
+        <button onClick={handleMenuClick} className="flex justify-center gap-1 flex-col cursor-pointer">
+            <div className={`${isOpen ? '-rotate-45' : 'rotate-0'} w-[20px] h-[2px] rounded-lg bg-white transition-all duration-300 ease-in-out`}></div>
+            <div className={`${isOpen ? 'rotate-45' : 'rotate-0'} w-[20px] h-[2px] rounded-lg bg-white transition-all duration-300 ease-in-out`}></div>
+            <div className={`${isOpen ? 'opacity-0' : 'opacity-100'} w-[20px] h-[2px] rounded-lg bg-white transition-all duration-300 ease-in-out`}></div>
         </button>
         </div>
        
        {isOpen && (
-         <nav className="w-full h-dvh fixed top-0 left-0 z-20 flex flex-col justify-center gap-5 items-end bg-[#737373] p-10">
-         <Link href='' className="nav-link opacity-100 text-[80px] font-medium text-white font-dm-mono leading-[70px]">Home</Link>
-         <Link href='' className="nav-link opacity-100 text-[80px] font-medium text-white font-dm-mono leading-[70px]">Products & Solutions</Link>
-         <Link href='' className="nav-link opacity-100 text-[80px] font-medium text-white font-dm-mono leading-[70px]">About Us</Link>
-         <Link href='' className="nav-link opacity-100 text-[80px] font-medium text-white font-dm-mono leading-[70px]">Contact Us</Link>
+         <nav id="nav-links-con" className="w-full h-dvh fixed top-0 left-0 z-20 flex flex-col justify-center gap-5 items-end bg-white/30 backdrop-blur-md p-15">
+         <Link
+         onClick={(e) => {
+            e.preventDefault();
+
+            if(isOpen) setIsOpen(false);
+            if (pathname === '/') return;
+            router.push("/", {
+                onTransitionReady: slideInOut,
+            })
+        }} 
+          href='' className={`nav-link opacity-100 text-5xl lg:text-[80px] text-right font-medium ${pathname === '/' ? 'text-primary-green' : 'text-white'} hover:text-primary-green transition-colors duration-300 ease-in-out font-dm-mono lg:leading-[70px]`}>Home</Link>
+         <Link
+         onClick={(e) => {
+            e.preventDefault();
+
+            if(isOpen) setIsOpen(false);
+            if (pathname === '/products') return;
+            router.push("/products", {
+                onTransitionReady: slideInOut,
+            })
+        }} 
+          href='' className={`nav-link opacity-100 text-5xl lg:text-[80px] text-right font-medium ${pathname === '/products' ? 'text-primary-green' : 'text-white'} hover:text-primary-green transition-colors duration-300 ease-in-out font-dm-mono lg:leading-[70px]`}>Products & Solutions</Link>
+         <Link
+         onClick={(e) => {
+            e.preventDefault();
+
+            if(isOpen) setIsOpen(false);
+            if (pathname === '/about') return;
+            router.push("/about", {
+                onTransitionReady: slideInOut,
+            })
+        }} 
+          href='' className={`nav-link opacity-100 text-5xl lg:text-[80px] text-right font-medium ${pathname === '/about' ? 'text-primary-green' : 'text-white'} hover:text-primary-green transition-colors duration-300 ease-in-out font-dm-mono lg:leading-[70px]`}>About Us</Link>
+         <Link
+         onClick={(e) => {
+            e.preventDefault();
+
+            if(isOpen) setIsOpen(false);
+            if (pathname === '/contact') return;
+            router.push("/contact", {
+                onTransitionReady: slideInOut,
+            })
+        }} 
+         href='' className={`nav-link opacity-100 text-5xl lg:text-[80px] text-right font-medium ${pathname === '/contact' ? 'text-primary-green' : 'text-white'} hover:text-primary-green transition-colors duration-300 ease-in-out font-dm-mono lg:leading-[70px]`}>Contact Us</Link>
          </nav>
        )}
 

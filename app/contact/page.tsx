@@ -1,6 +1,6 @@
 import HomeHeroSection from "@/components/HomeHeroSection";
 
-export default function Home() {
+export default function Contact() {
 
   return (
     <section className="relative w-full min-h-dvh opacity-100">
