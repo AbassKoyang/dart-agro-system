@@ -49,14 +49,20 @@ const Nav = () => {
 
 useGSAP(() => {
     if (isOpen) {
-      gsap.from('.nav-link', {
-        y: 50,
-        x: 50,
-        opacity: 0,
-        duration: 0.8,
-        stagger: 0.2,
-        ease: 'power2.inOut',
-      });
+        const tl = gsap.timeline();
+        tl.to('#nav-links-con', {
+            opacity: 1,
+            duration: 0.3,
+            ease: 'power2.in',
+          });
+        tl.from('.nav-link', {
+            y: 50,
+            x: 50,
+            opacity: 0,
+            duration: 0.8,
+            stagger: 0.2,
+            ease: 'power2.inOut',
+        });
     }
   }, { scope: headerRef, dependencies: [isOpen] });
   
@@ -104,7 +110,7 @@ const handleMenuClick = () => {
         </div>
        
        {isOpen && (
-         <nav id="nav-links-con" className="w-full h-dvh fixed top-0 left-0 z-20 flex flex-col justify-center gap-5 items-end bg-white/30 backdrop-blur-md p-15">
+         <nav id="nav-links-con" className="opacity-0 w-full h-dvh fixed top-0 left-0 z-20 flex flex-col justify-center gap-5 items-end bg-white/30 backdrop-blur-md p-15">
          <Link
          onClick={(e) => {
             e.preventDefault();

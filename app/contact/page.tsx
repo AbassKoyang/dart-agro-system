@@ -1,4 +1,4 @@
-import HomeHeroSection from "@/components/HomeHeroSection";
+import HomeHeroSection from "@/components/home/HomeHeroSection";
 
 export default function Contact() {
 

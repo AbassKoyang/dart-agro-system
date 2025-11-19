@@ -2,21 +2,24 @@
 import { usePathname } from 'next/navigation';
 import Overlay from './Overlay'
 import { useEffect, useState, useRef } from 'react';
+import { useStore } from '@/hooks/useStore';
 
 const Welcome = () => {
     const pathname = usePathname()
-    const [showOverlay, setShowOverlay] = useState(false)
+    const [showOverlay, setShowOverlay] = useState(true);
   
-    const firstLoadRef = useRef(true)
-  
-    useEffect(() => {
-      if (firstLoadRef.current) {
-        setShowOverlay(true)
-        firstLoadRef.current = false
-      } else {
-        setShowOverlay(false)
-      }
-    }, [pathname])
+    const isFirstLoad = useStore((state) => state.isFirstLoad);
+    const setIsFirstLoad = useStore((state) => state.setIsFirstLoad);
+
+  useEffect(() => {
+    if (isFirstLoad) {
+      setShowOverlay(false);
+      setIsFirstLoad(true);
+    } else {
+      setShowOverlay(true);
+      setIsFirstLoad(true)
+    }
+  }, [pathname]);
     
   return (
     <>
