@@ -5,7 +5,10 @@ import Link from 'next/link'
 import Label from '../Label'
 
 const TractorsAndHarvester = () => {
-    const isMobileDevice = window.innerWidth < 700;
+    let isMobileDevice;
+ if(window !== undefined){
+    isMobileDevice = window.innerWidth < 700;
+ }
   return (
     <section className='w-full py-14 lg:py-20 px-4 lg:px-[20px] bg-white'>
         <Label text='Precision Power for Every Farm.' />
