@@ -1,14 +1,24 @@
 'use client';
-import React from 'react'
 import ArrowRightTopLink from '../ArrowRightTopLink'
 import Link from 'next/link'
 import Label from '../Label'
+import { useEffect, useState } from 'react';
 
 const TractorsAndHarvester = () => {
-    let isMobileDevice;
- if(window !== undefined){
-    isMobileDevice = window.innerWidth < 700;
- }
+    const [isMobileDevice, setIsMobileDevice] = useState(false);
+
+    useEffect(() => {
+      const checkMobile = () => {
+        setIsMobileDevice(window.innerWidth < 700);
+      };
+  
+      checkMobile();
+      window.addEventListener("resize", checkMobile);
+  
+      return () => window.removeEventListener("resize", checkMobile);
+    }, []);
+
+
   return (
     <section className='w-full py-14 lg:py-20 px-4 lg:px-[20px] bg-white'>
         <Label text='Precision Power for Every Farm.' />
