@@ -11,7 +11,7 @@ const WhoWeAre = () => {
             <h3 className='text-primary-black text-[40px] leading-[45px] lg:text-[70px] text-left font-medium font-dm-mono lg:leading-[80px] will-change-transform lg:max-w-[585px]'>Built for Farmers. Driven by Innovation.</h3>
             <Link href='' className="flex items-center gap-2.5 py-3 px-4 rounded-[40px] text-[14px] lg:text-[20px] text-primary-black border border-primary-black mt-8 lg:mt-18 font-dm-mono font-normal hover:bg-primary-green hover:text-primary-black hover:border-primary-green transition-colors duration-300 ease-in-out w-fit">
                 <span>Learn About Our Story</span>
-                <ArrowRightTopLink linkStyle='size-[25px] lg:size-[33px]' svgStyle='size-[20px] lg:size-[25px]' />
+                <ArrowRightTopLink linkStyle='size-[25px] lg:size-[33px]' svgStyle='size-[20px] lg:size-[25px]' circleFill='#121212' pathFill='white' />
             </Link>
         </div>
         <div className="w-full lg:w-[50%] flex items-center justify-center">

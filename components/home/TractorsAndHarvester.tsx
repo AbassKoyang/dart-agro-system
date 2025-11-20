@@ -33,7 +33,7 @@ const TractorsAndHarvester = () => {
 
                     <Link href='' className="flex items-center gap-2.5 py-3 px-4 rounded-[40px] text-[14px] lg:text-[24px] text-primary-black bg-primary-green mt-4 font-dm-mono font-normal w-fit">
                         <span>View Range</span>
-                        <ArrowRightTopLink linkStyle='size-[25px] lg:size-[33px]' svgStyle='size-[20px] lg:size-[25px]' />
+                        <ArrowRightTopLink linkStyle='size-[25px] lg:size-[33px]' svgStyle='size-[20px] lg:size-[25px]' circleFill='#121212' pathFill='white' />
                     </Link>
                 </div>
             </div>
@@ -50,7 +50,7 @@ const TractorsAndHarvester = () => {
 
                 <Link href='' className="flex items-center gap-2.5 py-3 px-4 rounded-[40px] text-[14px] lg:text-[24px] text-primary-black bg-primary-green mt-4 font-dm-mono font-normal w-fit">
                     <span>View Range</span>
-                    <ArrowRightTopLink linkStyle='size-[25px] lg:size-[33px]' svgStyle='size-[20px] lg:size-[25px]' />
+                    <ArrowRightTopLink linkStyle='size-[25px] lg:size-[33px]' svgStyle='size-[20px] lg:size-[25px]' circleFill='#121212' pathFill='white' />
                 </Link>
                 </div>
             </div>

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Nav from "@/components/Nav";
 import { ViewTransitions } from "next-view-transitions";
+import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
   title: "Dart Agro System",
@@ -22,6 +23,7 @@ export default function RootLayout({
         <main className="w-full max-w-[1400px]">
         <Nav />
         {children}
+        <Footer />
         </main>
       </body>
     </html>
