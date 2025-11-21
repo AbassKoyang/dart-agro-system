@@ -4,7 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useStore } from "@/hooks/useStore";
 import { useGSAP } from "@gsap/react";
-import { useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 
 
@@ -12,6 +12,9 @@ const Nav = () => {
     const headerRef = useRef<HTMLElement>(null);
     const isOpen = useStore((state) => state.isOpen)
     const setIsOpen = useStore((state) => state.setIsOpen)
+    const [isScrolling, setIsScrolling] = useState(false);
+    const [lastScrollY, setLastScrollY] = useState(0)
+
 
     const router = useTransitionRouter();
     const pathname = usePathname();
@@ -90,10 +93,26 @@ const handleMenuClick = () => {
   };
 
 
+  useEffect(() => {
+    const checkIsScrolling = () => {
+        const currentY = window.scrollY;
+        if(currentY > lastScrollY && currentY > 50){
+            setIsScrolling(true)
+        } else {
+            setIsScrolling(false)
+        }
+        setLastScrollY(currentY);
+        console.log(currentY,lastScrollY, isScrolling)
+    };
+    window.addEventListener("scroll", checkIsScrolling);
+    return () => window.removeEventListener("scroll", checkIsScrolling);
+  }, [lastScrollY]);
+
+
   return (
-    <header ref={headerRef} className="w-full  fixed top-0 left-0 z-[1000]">
+    <header ref={headerRef} className={`${isScrolling ? "-translate-y-[100px]" : "translate-y-0" } w-full fixed top-0 left-0 z-[1000] duration-300 ease-in-out transition-all`}>
         <div className="w-full fixed top-0 left-0 flex items-center justify-between z-30 py-6 px-5 bg-white/30 backdrop-blur-md">
-        <Link className="flex gap-2 items-center" href={'/'}>
+        <Link className="flex gap-2 items-center" href={'/'}>   
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M22 12C22 17.523 17.523 22 12 22C6.477 22 2 17.523 2 12C2 6.477 6.477 2 12 2C17.523 2 22 6.477 22 12Z" stroke="white" stroke-width="2"/>
             <path d="M18 12C18 13.5913 17.3679 15.1174 16.2426 16.2426C15.1174 17.3679 13.5913 18 12 18C10.4087 18 8.88258 17.3679 7.75736 16.2426C6.63214 15.1174 6 13.5913 6 12C6 10.4087 6.63214 8.88258 7.75736 7.75736C8.88258 6.63214 10.4087 6 12 6C13.5913 6 15.1174 6.63214 16.2426 7.75736C17.3679 8.88258 18 10.4087 18 12Z" stroke="white" stroke-width="2"/>

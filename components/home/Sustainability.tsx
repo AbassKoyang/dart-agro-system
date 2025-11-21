@@ -1,21 +1,56 @@
-import React from 'react'
+'use client';
 import Label from '../Label'
+import { useGSAP } from '@gsap/react'
+import gsap from 'gsap';
+import { SplitText } from 'gsap/all';
+gsap.registerPlugin(SplitText);
 
 const Sustainability = () => {
+    useGSAP(() => {
+        const tl = gsap.timeline({scrollTrigger:{
+                trigger: '#sustainability-section',
+                start: 'top center',
+                toggleActions: 'play pause resume reverse'
+        }})
+        let split = SplitText.create("#sustainability-headline", { type: "words" });
+        tl.from(split.words, {
+          duration: 1, 
+          y: 100,
+          autoAlpha: 0, 
+          stagger: 0.1
+        });
+        tl.from('#sustainability-text', {
+            duration: 0.5, 
+            y: 20,
+            opacity: 0, 
+          }, '<0.5');
+          const tl2 = gsap.timeline({scrollTrigger: {
+            trigger: '#sustainability-section-list',
+            start: 'top center',
+            toggleActions: 'play pause resume reverse'
+          }})
+          tl2.from('.sustainability-list-item', {
+            duration: 1, 
+            y: 30,
+            opacity: 0, 
+            stagger: 0.3
+          });
+      }, [])
+
   return (
-    <section className='w-full py-14 lg:py-20 px-4 lg:px-[20px] bg-white'>
+    <section id='sustainability-section' className='w-full py-14 lg:py-20 px-4 lg:px-[20px] bg-white'>
         <Label text='Sustainability Commitment'/>
        <div className="w-full flex flex-col lg:flex-row items-start justify-between gap-10 lg:gap-0 mt-6">
             <div className="w-full lg:w-[50%]">
-                <h3 className='text-primary-black text-[40px] leading-[45px] lg:text-[70px] text-left font-medium font-dm-mono lg:leading-[80px] will-change-transform lg:max-w-[585px]'>Powering a Greener Future for Global Agriculture.</h3>
+                <h3 id='sustainability-headline' className='text-primary-black text-[40px] leading-[45px] lg:text-[70px] text-left font-medium font-dm-mono lg:leading-[80px] will-change-transform lg:max-w-[585px]'>Powering a Greener Future for Global Agriculture.</h3>
             </div>
             <div className="w-full lg:w-[50%] flex items-center justify-end">
-                <p className='font-dm-mono font-normal text-[16px] lg:text-[20px] text-primary-black/70 text-left max-w-full lg:max-w-[550px]'>Sustainability is at the heart of everything we build. 
+                <p id='sustainability-text' className='font-dm-mono font-normal text-[16px] lg:text-[20px] text-primary-black/70 text-left max-w-full lg:max-w-[550px]'>Sustainability is at the heart of everything we build. 
                 Our R&D teams are constantly innovating to minimize fuel use, reduce emissions, and design eco-efficient machinery. Because the future of farming must be as sustainable as it is productive.</p>
             </div>
        </div>
-       <div className="mt-18 w-full flex flex-col gap-12 lg:flex-row lg:gap-6">
-        <div className="w-full lg:flex-1 flex flex-col justify-between border-1 border-[#EDEDED] rounded-[6px] overflow-hidden">
+       <div id='sustainability-section-list' className="mt-18 w-full flex flex-col gap-12 lg:flex-row lg:gap-6">
+        <div className="sustainability-list-item w-full lg:flex-1 flex flex-col justify-between border-1 border-[#EDEDED] rounded-[6px] overflow-hidden">
             <div className="w-full p-6">
                 <div className="flex w-full gap-5 items-center lg:items-start">
                     <div className="size-[50px] bg-primary-green rounded-full flex items-center justify-center">
@@ -31,7 +66,7 @@ const Sustainability = () => {
                 <img src="/images/sustainability-1.png" alt="Tractor image" className="w-full object-center" />
             </div>
         </div>
-        <div className="w-full lg:flex-1 flex flex-col justify-between border-1 border-[#EDEDED] rounded-[6px] overflow-hidden">
+        <div className="sustainability-list-item w-full lg:flex-1 flex flex-col justify-between border-1 border-[#EDEDED] rounded-[6px] overflow-hidden">
             <div className="w-full p-6">
                 <div className="flex w-full gap-5 items-center lg:items-start">
                     <div className="size-[50px] bg-primary-green rounded-full flex items-center justify-center">
@@ -55,7 +90,7 @@ const Sustainability = () => {
                 <img src="/images/sustainability-2.png" alt="Tractor image" className="w-full h-full object-cover object-center" />
             </div>
         </div>
-        <div className="w-full lg:flex-1 flex flex-col justify-between border-1 border-[#EDEDED] rounded-[6px] overflow-hidden">
+        <div className="sustainability-list-item w-full lg:flex-1 flex flex-col justify-between border-1 border-[#EDEDED] rounded-[6px] overflow-hidden">
             <div className="w-full p-6">
                 <div className="flex w-full gap-5 items-center lg:items-start">
                     <div className="size-[50px] bg-primary-green rounded-full flex items-center justify-center">

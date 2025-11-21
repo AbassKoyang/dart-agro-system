@@ -1,9 +1,24 @@
+'use client';
+import { useGSAP } from '@gsap/react';
+import gsap from 'gsap';
 import Link from 'next/link';
-import React from 'react'
 
-const BlogPreview = ({title, date, text, imageUrl}:{title: string; text: string; date: string; imageUrl: string}) => {
+const BlogPreview = ({title, date, text, imageUrl, id}:{title: string; text: string; date: string; imageUrl: string; id: string}) => {
+    useGSAP(() => {
+        const tl = gsap.timeline({scrollTrigger:{
+                trigger: `#${id}`,
+                start: 'top center',
+                toggleActions: 'play pause resume reverse'
+        }})
+        tl.from(`#${id}`, {
+            duration: 1, 
+            y: 30,
+            opacity: 0, 
+          });
+      }, [])
+
   return (
-    <Link href='#' className='w-full lg:h-[392px] flex flex-col lg:flex-row justify-between'>
+    <Link id={id} href='#' className='w-full lg:h-[392px] flex flex-col lg:flex-row justify-between'>
         <div className="w-full lg:w-fit lg:h-full flex flex-col lg:flex-row items-start gap-5">
             <div className="w-full lg:w-[518px] h-[392px] lg:h-full overflow-hidden">
                 <img src={imageUrl} alt="Blog preview image" className='size-full object-center object-cover' />
