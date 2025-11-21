@@ -23,7 +23,7 @@ const Sustainability = () => {
             duration: 0.5, 
             y: 20,
             opacity: 0, 
-          }, '<0.5');
+          });
           const tl2 = gsap.timeline({scrollTrigger: {
             trigger: '#sustainability-section-list',
             start: 'top center',

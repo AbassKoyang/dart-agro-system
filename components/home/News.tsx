@@ -24,7 +24,7 @@ const News = () => {
             duration: 0.5, 
             y: 20,
             opacity: 0, 
-          }, '<0.5');
+          });
          
       }, [])
 

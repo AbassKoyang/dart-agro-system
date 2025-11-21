@@ -39,7 +39,7 @@ const TechnologyAndInnovation = () => {
             duration: 0.5, 
             y: 20,
             opacity: 0, 
-          }, '<0.5');
+          });
           const tl2 = gsap.timeline({scrollTrigger: {
             trigger: '#technology-and-innovation-section-list',
             start: 'top center',

@@ -25,12 +25,12 @@ const WhoWeAre = () => {
           duration: 0.5, 
           y: 20,
           opacity: 0, 
-        }, '<0.5');
+        });
       tl.from('#who-we-are-text', {
           duration: 0.5, 
           y: 20,
           opacity: 0, 
-        }, '<0.5');
+        },);
       }, [])
 
   return (

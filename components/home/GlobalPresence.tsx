@@ -23,7 +23,7 @@ const GlobalPresence = () => {
             duration: 0.5, 
             y: 20,
             opacity: 0, 
-          }, '<0.5');
+          });
           const tl2 = gsap.timeline({scrollTrigger: {
             trigger: '#global-presence-section-images-1',
             start: 'top center',

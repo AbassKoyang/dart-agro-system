@@ -22,20 +22,21 @@ const TractorsAndHarvester = () => {
 
     useGSAP(() => {
         const tl = gsap.timeline({scrollTrigger:{
-                trigger: '#tractors-and-harvesters-section',
+                trigger: '#tractors-and-harvesters-section-desktop',
                 start: 'top center',
                 toggleActions: 'play pause resume reverse'
         }});
-        if (isMobileDevice) {
-            gsap.from('#tractor-and-harvesters-full', {
+        const tlmobile = gsap.timeline({scrollTrigger:{
+                trigger: '#tractors-and-harvesters-section-mobile',
+                start: 'top center',
+                toggleActions: 'play pause resume reverse'
+        }});
+        if(isMobileDevice){
+            tlmobile.from('.tractor-and-harvesters-full', {
                 duration: 1.5, 
-                y: -30,
+                y: 30,
                 scale: 2,
                 opacity: 0, 
-                scrollTrigger:{
-                    trigger: '#tractors-and-harvesters-section',
-                    start: 'top center',
-                    toggleActions: 'play pause resume reverse'}
               });
         } else {
             tl.from('#tractors-and-harvesters-image-left', {
@@ -54,6 +55,7 @@ const TractorsAndHarvester = () => {
                 opacity: 0, 
               }, '<');
         }
+
         tl.from('#tractor-and-harvesters-text', {
             duration: 0.5, 
             y: 20,
@@ -71,9 +73,9 @@ const TractorsAndHarvester = () => {
     <section className='w-full py-14 lg:py-20 px-4 lg:px-[20px] bg-white'>
         <Label text='Precision Power for Every Farm.' />
        {isMobileDevice  ? (
-            <div id='tractors-and-harvesters-section' className="w-full mt-6">
-                <div id='tractor-and-harvesters-full' className="w-full">
-                <img src="/images/tractor-and-harvesters-full.png" alt="Tractor image" className='w-full object-contain object-center' />
+            <div id='tractors-and-harvesters-section-mobile' className="w-full mt-6 overflow-hidden">
+                <div  className="w-full">
+                <img src="/images/tractor-and-harvesters-full.png" alt="Tractor image" className='w-full object-contain object-center tractor-and-harvesters-full' />
                 </div>
                 <div className="">
                     <h3 id='tractor-and-harvesters-text' className='text-primary-black text-[18px] lg:text-[34px] text-left font-medium font-dm-mono will-change-transform max-w-full mt-12'>Tractors & Harvesters</h3>
@@ -86,7 +88,7 @@ const TractorsAndHarvester = () => {
                 </div>
             </div>
        ) : (
-        <div id='tractors-and-harvesters-section' className="w-full flex items-start gap-2 mt-6 overflow-hidden">
+        <div id='tractors-and-harvesters-section-desktop' className="w-full flex items-start gap-2 mt-6 overflow-hidden">
             <div id='tractors-and-harvesters-image-left' className="flex-1">
                 <img src="/images/tractor-and-harvesters-1.png" alt="Tractor image" className='w-full object-contain object-center' />
             </div>
