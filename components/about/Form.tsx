@@ -31,7 +31,7 @@ const Form = () => {
             </form>
         </div>
         <div className="w-full lg:w-[50%] h-[482px] relative bg-amber-300">
-            <img src="/images/tractor-and-harvesters-full.png" alt="Tractor image" className="absolute top-0 left-0 size-full object-center object-cover z-10" />
+            <img data-lag="0.2"  src="/images/tractor-and-harvesters-full.png" alt="Tractor image" className="absolute top-0 left-0 size-full object-center object-cover z-10" />
             <div className="w-full h-full bg-primary-green/80 flex items-center justify-center z-20 absolute top-0 left-0"></div>
             <div className="w-full h-full flex items-center justify-center z-30 absolute top-0 left-0">
              <div className="flex flex-col items-center justify-center max-w-[300px] lg:max-w-[450px]">

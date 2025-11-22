@@ -75,7 +75,7 @@ const TractorsAndHarvester = () => {
        {isMobileDevice  ? (
             <div id='tractors-and-harvesters-section-mobile' className="w-full mt-6 overflow-hidden">
                 <div  className="w-full">
-                <img src="/images/tractor-and-harvesters-full.png" alt="Tractor image" className='w-full object-contain object-center tractor-and-harvesters-full' />
+                <img data-lag="0.2"  src="/images/tractor-and-harvesters-full.png" alt="Tractor image" className='w-full object-contain object-center tractor-and-harvesters-full' />
                 </div>
                 <div className="">
                     <h3 id='tractor-and-harvesters-text' className='text-primary-black text-[18px] lg:text-[34px] text-left font-medium font-dm-mono will-change-transform max-w-full mt-12'>Tractors & Harvesters</h3>
@@ -90,10 +90,10 @@ const TractorsAndHarvester = () => {
        ) : (
         <div id='tractors-and-harvesters-section-desktop' className="w-full flex items-start gap-2 mt-6 overflow-hidden">
             <div id='tractors-and-harvesters-image-left' className="flex-1">
-                <img src="/images/tractor-and-harvesters-1.png" alt="Tractor image" className='w-full object-contain object-center' />
+                <img data-lag="0.2"  src="/images/tractor-and-harvesters-1.png" alt="Tractor image" className='w-full object-contain object-center' />
             </div>
             <div className="flex-1">
-                <img id='tractors-and-harvesters-image-center' src="/images/tractor-and-harvesters-2.png" alt="Tractor image" className='w-full object-contain object-center origin-center' />
+                <img data-lag="0.2"  id='tractors-and-harvesters-image-center' src="/images/tractor-and-harvesters-2.png" alt="Tractor image" className='w-full object-contain object-center origin-center' />
                 <div className="">
                 <h3 id='tractor-and-harvesters-text' className='text-primary-black text-[18px] lg:text-[34px] text-left font-medium font-dm-mono will-change-transform max-w-full mt-12'>Tractors & Harvesters</h3>
                 <p id='tractor-and-harvesters-text' className='font-dm-mono font-normal text-[12px] lg:text-[16px] text-primary-black/70 text-left'>Rugged, intelligent, and optimized for maximum yield efficiency.</p>
@@ -105,7 +105,7 @@ const TractorsAndHarvester = () => {
                 </div>
             </div>
             <div  id='tractors-and-harvesters-image-right' className="flex-1">
-                <img src="/images/tractor-and-harvesters-3.png" alt="Tractor image" className='w-full object-contain object-center' />
+                <img data-lag="0.2"  src="/images/tractor-and-harvesters-3.png" alt="Tractor image" className='w-full object-contain object-center' />
             </div>
         </div>
        )}

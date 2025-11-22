@@ -69,8 +69,8 @@ const Quote = () => {
                 <ArrowRightTopLink linkStyle='size-[25px] lg:size-[33px] bg-white' svgStyle='size-[20px] lg:size-[25px]' circleFill='white' pathFill='black' />
             </Link>
         </div>
-        <img src="/images/quoute-left.png" alt="" aria-hidden className='quote-right absolute top-[50%] right-0 translate-y-[-50%] h-full z-10 lg:block' />
-        <img src="/images/quoute-right.png" alt="" aria-hidden className='quote-left absolute top-[50%] left-0 translate-y-[-50%] h-full z-10  lg:block' />
+        <img data-lag="0.2"  src="/images/quoute-left.png" alt="" aria-hidden className='quote-right absolute top-[50%] right-0 translate-y-[-50%] h-full z-10 lg:block' />
+        <img data-lag="0.2"  src="/images/quoute-right.png" alt="" aria-hidden className='quote-left absolute top-[50%] left-0 translate-y-[-50%] h-full z-10  lg:block' />
     </section>
   )
 }

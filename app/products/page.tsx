@@ -8,7 +8,7 @@ import ProductsAndCategories from "@/components/products-and-solutions/ProductAn
 export default function Products() {
 
   return (
-    <section id="products-hero-section" className="relative w-full min-h-[100vh] opacity-100 overflow-x-hidden">
+    <section id="products-hero-section" className="relative w-full min-h-[100vh] opacity-100 overflow-x-hidden bg-white">
       <ProductsHeroSection />
       <ProductsAndCategories />
       <Form />

@@ -68,7 +68,7 @@ const TechnologyAndInnovation = () => {
             <Label text='Technology & Innovation'/>
             <h3 id="technology-and-innovation-headline" className='text-primary-black text-[40px] leading-[45px] lg:text-[70px] text-left font-medium font-dm-mono lg:leading-[80px] will-change-transform lg:max-w-[650px]'>Smart Technology Meets Solid Engineering.</h3>
             <div id="technology-and-innovation-image" className="mt-10 lg:mt-[370px] w-full h-fit lg:w-[312px] lg:h-[298px]">
-                <img src="/images/tractor-and-harvesters-square.png" alt="Tractor image" className="w-full object-contain object-center" />
+                <img data-lag="0.2"  src="/images/tractor-and-harvesters-square.png" alt="Tractor image" className="w-full object-contain object-center" />
             </div>
         </div>
         <div className="w-full lg:w-[50%] flex flex-col items-center justify-start">

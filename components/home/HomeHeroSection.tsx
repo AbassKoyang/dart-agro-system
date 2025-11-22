@@ -33,7 +33,7 @@ export default function HomeHeroSection() {
 
   return (
     <section id="hero-section" className="relative w-full h-dvh flex items-end opacity-100 px-4 lg:px-[20px]">
-      <img src='/images/hero-tractor-img.png' alt="Tractor" className="w-full h-full absolute top-0 left-0 z-10 object-center object-cover"  />
+      <img data-lag="0.2"  src='/images/hero-tractor-img.png' alt="Tractor" className="w-full h-full absolute top-0 left-0 z-10 object-center object-cover"  />
       <Welcome />
       <div className="w-full z-20 mb-10 flex flex-col items-start lg:flex-row lg:items-end lg:justify-between">
         <div className="">
@@ -42,7 +42,7 @@ export default function HomeHeroSection() {
         </div>
         <div className="flex items-start hero-cta translate-y-0 opacity-100 mt-5 lg:mt-0">
           <ArrowRightTopLink linkStyle="size-[30px] lg:size-[45px]" svgStyle="size-[25px] lg:size-[50px]" circleFill="#121212" pathFill="white" />
-          <Link href={''} className="bg-primary-green text-primary-black font-normal font-dm-mono px-6 py-2 lg:px-8 lg:py-3 rounded-4xl text-[16px] lg:text-[24px]">Explore Our Machines</Link>
+          <Link href={''} className="bg-primary-green text-primary-black font-normal font-dm-mono px-6 py-2 lg:px-6 lg:py-3 rounded-4xl text-[16px] lg:text-[24px]">Explore Our Machines</Link>
         </div>
       </div>
     </section>

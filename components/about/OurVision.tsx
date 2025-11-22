@@ -74,22 +74,22 @@ const OurVision = () => {
         </div>
         <div id="our-vision-images-section" className="w-full flex items-start gap-3 h-[211px] mt-20 overflow-hidden">
             <div id="our-vision-image-1" className="flex-1 h-full">
-                <img src="/images/our-vision-6.png" alt="Farm images" className="size-full object-center object-cover" />
+                <img data-lag="0.2"  src="/images/our-vision-6.png" alt="Farm images" className="size-full object-center object-cover" />
             </div>
             <div id="our-vision-image-2" className="flex-1 h-full">
-                <img src="/images/our-vision-2.png" alt="Farm images" className="size-full object-center object-cover" />
+                <img data-lag="0.2"  src="/images/our-vision-2.png" alt="Farm images" className="size-full object-center object-cover" />
             </div>
             <div id="our-vision-image-3" className="flex-1 h-full">
-                <img src="/images/our-vision-3.png" alt="Farm images" className="size-full object-center object-cover" />
+                <img data-lag="0.2"  src="/images/our-vision-3.png" alt="Farm images" className="size-full object-center object-cover" />
             </div>
             <div id="our-vision-image-4" className="flex-1 h-full">
-                <img src="/images/our-vision-4.png" alt="Farm images" className="size-full object-center object-cover" />
+                <img data-lag="0.2"  src="/images/our-vision-4.png" alt="Farm images" className="size-full object-center object-cover" />
             </div>
             <div id="our-vision-image-5" className="flex-1 h-full">
-                <img src="/images/our-vision-5.png" alt="Farm images" className="size-full object-center object-cover" />
+                <img data-lag="0.2"  src="/images/our-vision-5.png" alt="Farm images" className="size-full object-center object-cover" />
             </div>
             <div id="our-vision-image-6" className="flex-1 h-full">
-                <img src="/images/our-vision-1.png" alt="Farm images" className="size-full object-center object-cover" />
+                <img data-lag="0.2"  src="/images/our-vision-1.png" alt="Farm images" className="size-full object-center object-cover" />
             </div>
         </div>
     </section>

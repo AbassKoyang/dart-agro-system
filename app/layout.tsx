@@ -4,6 +4,7 @@ import Nav from "@/components/Nav";
 import { ViewTransitions } from "next-view-transitions";
 import Footer from "@/components/Footer";
 import Quote from "@/components/home/Quote";
+import SmoothScroll from "@/components/ScrollSMoother";
 
 export const metadata: Metadata = {
   title: "Dart Agro System",
@@ -21,10 +22,12 @@ export default function RootLayout({
       <body
         className={`antialiased w-[100vw] h-[100vh] flex justify-center overflow-x-hidden bg-black`}
       >
+        <SmoothScroll>
         <main className="w-full max-w-[1400px]">
         <Nav />
         {children}
         </main>
+        </SmoothScroll>
       </body>
     </html>
     </ViewTransitions>

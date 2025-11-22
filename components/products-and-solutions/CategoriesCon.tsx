@@ -39,19 +39,19 @@ const CategoriesCon = () => {
             <div className="w-full overflow-x-auto scrollbar-hide carousel-container">
                 <div className="w-fit flex gap-6">
                 <div  className="category-image min-w-[85%] lg:min-w-[413px] h-[380px] group overflow-hidden">
-                    <img src="/images/product-4.png" alt="Tractor images" className='size-full object-center object-cover group-hover:scale-120 transition-transform duration-500 ease-in-out' />
+                    <img data-lag="0.2"  src="/images/product-4.png" alt="Tractor images" className='size-full object-center object-cover group-hover:scale-120 transition-transform duration-500 ease-in-out' />
                 </div>
                 <div  className="category-image min-w-[85%] lg:min-w-[413px] h-[380px] group overflow-hidden">
-                    <img src="/images/product-3.png" alt="Tractor images" className='size-full object-center object-cover group-hover:scale-120 transition-transform duration-500 ease-in-out' />
+                    <img data-lag="0.2"  src="/images/product-3.png" alt="Tractor images" className='size-full object-center object-cover group-hover:scale-120 transition-transform duration-500 ease-in-out' />
                 </div>
                 <div  className="category-image min-w-[85%] lg:min-w-[413px] h-[380px] group overflow-hidden">
-                    <img src="/images/product-2.png" alt="Tractor images" className='size-full object-center object-cover group-hover:scale-120 transition-transform duration-500 ease-in-out' />
+                    <img data-lag="0.2"  src="/images/product-2.png" alt="Tractor images" className='size-full object-center object-cover group-hover:scale-120 transition-transform duration-500 ease-in-out' />
                 </div>
                 <div  className="category-image min-w-[85%] lg:min-w-[413px] h-[380px] group overflow-hidden">
-                    <img src="/images/product-1.png" alt="Tractor images" className='size-full object-center object-cover group-hover:scale-120 transition-transform duration-500 ease-in-out' />
+                    <img data-lag="0.2"  src="/images/product-1.png" alt="Tractor images" className='size-full object-center object-cover group-hover:scale-120 transition-transform duration-500 ease-in-out' />
                 </div>
                 <div  className="category-image min-w-[85%] lg:min-w-[413px] h-[380px] group overflow-hidden">
-                    <img src="/images/product-4.png" alt="Tractor images" className='size-full object-center object-cover group-hover:scale-120 transition-transform duration-500 ease-in-out' />
+                    <img data-lag="0.2"  src="/images/product-4.png" alt="Tractor images" className='size-full object-center object-cover group-hover:scale-120 transition-transform duration-500 ease-in-out' />
                 </div>
                 </div>
             </div>

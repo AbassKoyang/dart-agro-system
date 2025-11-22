@@ -67,7 +67,7 @@ const TechnologyAndInnovation = () => {
         </div>
         <div id="tech-and-innovation-section-about-image" className="w-full mt-12 lg:mt-24">
             <div id="technology-and-innovation-about-image" className="w-full h-[305px] lg:h-[610px] overflow-hidden">
-                    <img src="/images/tech-and-innovation-about.png" alt="Tractor image" className="w-full object-contain object-center" />
+                    <img data-lag="0.2"  src="/images/tech-and-innovation-about.png" alt="Tractor image" className="w-full object-contain object-center" />
             </div>
         </div>
     </section>

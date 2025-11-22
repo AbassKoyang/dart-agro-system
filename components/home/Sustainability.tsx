@@ -63,7 +63,7 @@ const Sustainability = () => {
                 <p className='font-dm-mono font-normal text-[16px] lg:text-[20px] text-primary-black/70 text-left max-w-full mt-6'>Our machines are engineered for efficiency — from advanced hybrid engines to precision farming systems that cut fuel waste. Every design decision aims to lower emissions, minimize resource use, and help farmers achieve more with less impact on the planet.</p>
             </div>
             <div className="w-full h-[300px] mt-5 flex items-end overflow-hidden">
-                <img src="/images/sustainability-1.png" alt="Tractor image" className="w-full object-center" />
+                <img data-lag="0.2"  src="/images/sustainability-1.png" alt="Tractor image" className="w-full object-center" />
             </div>
         </div>
         <div className="sustainability-list-item w-full lg:flex-1 flex flex-col justify-between border-1 border-[#EDEDED] rounded-[6px] overflow-hidden">
@@ -87,7 +87,7 @@ const Sustainability = () => {
                 <p className='font-dm-mono font-normal text-[16px] lg:text-[20px] text-primary-black/70 text-left max-w-full mt-6'>We prioritize circular design by using recyclable metals, composites, and eco-friendly components across our equipment line. This ensures durability during use and responsible recovery at the end of each machine’s lifecycle.</p>
             </div>
             <div className="w-full h-[300px] mt-5">
-                <img src="/images/sustainability-2.png" alt="Tractor image" className="w-full h-full object-cover object-center" />
+                <img data-lag="0.2"  src="/images/sustainability-2.png" alt="Tractor image" className="w-full h-full object-cover object-center" />
             </div>
         </div>
         <div className="sustainability-list-item w-full lg:flex-1 flex flex-col justify-between border-1 border-[#EDEDED] rounded-[6px] overflow-hidden">
@@ -104,7 +104,7 @@ const Sustainability = () => {
                 <p className='font-dm-mono font-normal text-[16px] lg:text-[20px] text-primary-black/70 text-left max-w-full mt-6'>Our facilities and manufacturing lines integrate renewable energy sources like solar and wind power. We’re steadily reducing our dependence on fossil fuels while moving toward a fully sustainable production ecosystem.</p>
             </div>
             <div className="w-full h-[300px] mt-5">
-                <img src="/images/sustainability-3.png" alt="Tractor image" className="w-full h-full object-cover object-center" />
+                <img data-lag="0.2"  src="/images/sustainability-3.png" alt="Tractor image" className="w-full h-full object-cover object-center" />
             </div>
         </div>
 
