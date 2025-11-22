@@ -28,7 +28,7 @@ const TechnologyAndInnovation = () => {
         }})
         let split = SplitText.create("#technology-and-innovation-headline-about", { type: "words" });
         tl.from(split.words, {
-          duration: 1, 
+          duration: 0.5, 
           y: 100,
           autoAlpha: 0, 
           stagger: 0.1

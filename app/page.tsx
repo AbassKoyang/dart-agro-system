@@ -1,3 +1,4 @@
+import Footer from "@/components/Footer";
 import GlobalPresence from "@/components/home/GlobalPresence";
 import HomeHeroSection from "@/components/home/HomeHeroSection";
 import News from "@/components/home/News";
@@ -21,6 +22,7 @@ export default function Home() {
       <GlobalPresence />
       <News />
       <Quote />
+      <Footer />
     </section>
   );
 }

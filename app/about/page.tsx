@@ -4,6 +4,8 @@ import OurVision from "../../components/about/OurVision";
 import TechnologyAndInnovation from "@/components/about/TechnologyAndInnovation";
 import Quote from "@/components/home/Quote";
 import TheTeam from "../../components/about/TheTeam";
+import Form from "@/components/about/Form";
+import Footer from "@/components/Footer";
 
 export default function About() {
 
@@ -14,7 +16,9 @@ export default function About() {
       <OurVision />
       <TechnologyAndInnovation />
       <TheTeam />
+      <Form />
       <Quote />
+      <Footer />
     </section>
   );
 }

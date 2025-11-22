@@ -12,8 +12,8 @@ const StatsSection = () => {
         gsap.from('.stat-box', {
             opacity: 0,
             scale: 0,
-            duration: 1,
-            stagger: 0.25,
+            duration: 0.6,
+            stagger: 0.15,
             scrollTrigger: {
                 trigger: '#stats-section',
                 start: 'top center',

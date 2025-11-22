@@ -14,7 +14,7 @@ const Sustainability = () => {
         }})
         let split = SplitText.create("#sustainability-headline", { type: "words" });
         tl.from(split.words, {
-          duration: 1, 
+          duration: 0.5, 
           y: 100,
           autoAlpha: 0, 
           stagger: 0.1

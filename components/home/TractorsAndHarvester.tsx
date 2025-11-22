@@ -33,7 +33,7 @@ const TractorsAndHarvester = () => {
         }});
         if(isMobileDevice){
             tlmobile.from('.tractor-and-harvesters-full', {
-                duration: 1.5, 
+                duration: 1, 
                 y: 30,
                 scale: 2,
                 opacity: 0, 
@@ -45,7 +45,7 @@ const TractorsAndHarvester = () => {
                 opacity: 0, 
               });
             tl.from('#tractors-and-harvesters-image-center', {
-                duration: 1.5, 
+                duration: 2, 
                 scale: 0,
                 opacity: 0, 
               }, '<');

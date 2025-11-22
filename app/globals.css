@@ -194,3 +194,22 @@
   }
 
 }
+
+.scrollbar-hide {
+  -ms-overflow-style: none; 
+  scrollbar-width: none; 
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none; 
+}
+.carousel-container {
+  scroll-snap-type: x mandatory;
+  scroll-padding-left: 0px;
+  scroll-padding-right: 0px;
+}
+.card-carousel-container {
+  scroll-snap-type: x mandatory;
+  scroll-padding-left: 0px;
+  scroll-padding-right: 0px;
+}

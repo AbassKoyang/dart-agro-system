@@ -16,7 +16,7 @@ const WhoWeAre = () => {
         }});
         let split = SplitText.create("#who-we-are-headline", { type: "words" });
         tl.from(split.words, {
-          duration: 1, 
+          duration: 0.5, 
           y: 100,
           autoAlpha: 0, 
           stagger: 0.1

@@ -66,7 +66,7 @@ const Overlay = () => {
 
             tl.to(logoRef.current.querySelector('path'), {
                 strokeDashoffset: 0,
-                duration: 2,
+                duration: 1,
                 ease: 'power2.inOut'
             })
         }

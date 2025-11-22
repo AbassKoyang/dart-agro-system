@@ -14,7 +14,7 @@ const GlobalPresence = () => {
         }})
         let split = SplitText.create("#global-presence-headline", { type: "words" });
         tl.from(split.words, {
-          duration: 1, 
+          duration: 0.5, 
           y: 100,
           autoAlpha: 0, 
           stagger: 0.1
@@ -30,12 +30,12 @@ const GlobalPresence = () => {
             toggleActions: 'play pause resume reverse'
           }})
           tl2.from('#global-presence-section-image-1', {
-            duration: 1, 
+            duration: 1.5, 
             y: '-100%',
             opacity: 0, 
           });
         tl2.from('#global-presence-section-image-2', {
-            duration: 1, 
+            duration: 2, 
             y: '100%',
             opacity: 0, 
           }, '<');
@@ -45,12 +45,12 @@ const GlobalPresence = () => {
             opacity: 0, 
           }, '<');
           tl2.from('#global-presence-section-image-4', {
-            duration: 1, 
+            duration: 2, 
             y: '-100%',
             opacity: 0, 
           }, '<');
           tl2.from('#global-presence-section-image-5', {
-            duration: 1, 
+            duration: 1.5, 
             x: '100%',
             opacity: 0, 
           }, '<');
@@ -60,7 +60,7 @@ const GlobalPresence = () => {
             toggleActions: 'play pause resume reverse'
           }})
           tl3.from('#global-presence-section-image-6', {
-            duration: 1, 
+            duration: 1.5, 
             y: '-100%',
             opacity: 0, 
           });
@@ -70,17 +70,17 @@ const GlobalPresence = () => {
             opacity: 0, 
           }, '<');
         tl3.from('#global-presence-section-image-8', {
-            duration: 1, 
+            duration: 2, 
             x: '100%',
             opacity: 0, 
           }, '<');
           tl3.from('#global-presence-section-image-9', {
-            duration: 1, 
+            duration: 2, 
             y: '100%',
             opacity: 0, 
           }, '<');
           tl3.from('#global-presence-section-image-10', {
-            duration: 1, 
+            duration: 1.5, 
             x: '-100%',
             opacity: 0, 
           }, '<');
