@@ -29,7 +29,7 @@ export default function AboutHeroSection() {
   })
 
   return (
-    <section id="hero-section" className="relative w-full h-[100vh] flex items-end opacity-100 px-4">
+    <section id="hero-section" className="relative w-full h-dvh] flex items-end opacity-100 px-4">
       <img src='/images/about-hero-farm-img.png' alt="Tractor" className="w-full h-full absolute top-0 left-0 z-10 object-center object-cover"  />
       <div className="w-full z-20 mb-10 flex flex-col items-start lg:flex-row lg:items-end lg:justify-between">
         <div className="">

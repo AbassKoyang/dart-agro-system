@@ -12,7 +12,7 @@ import WhoWeAre from "@/components/home/WhoWeAre";
 export default function Home() {
 
   return (
-    <section className="relative w-full min-h-[100vh] opacity-100">
+    <section className="relative w-full min-h-[100vh] opacity-100 overflow-x-hidden">
       <HomeHeroSection />
       <StatsSection/>
       <WhoWeAre />

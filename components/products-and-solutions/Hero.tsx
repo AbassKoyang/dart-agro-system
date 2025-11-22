@@ -31,7 +31,7 @@ export default function ProductsHeroSection() {
   })
 
   return (
-    <section id="products-hero-section" className="relative w-full h-[100vh] flex items-end opacity-100 px-4 lg:px-[20px]">
+    <section id="products-hero-section" className="relative w-full h-dvh flex items-end opacity-100 px-4 lg:px-[20px]">
       <img src='/images/products-hero.png' alt="Tractor" className="w-full h-full absolute top-0 left-0 z-10 object-center object-cover"  />
       <div className="w-full z-20 mb-10 flex flex-col items-start lg:flex-row lg:items-end lg:justify-between">
         <div className="">

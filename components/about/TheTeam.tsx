@@ -60,7 +60,7 @@ const TheTeam = () => {
               <p id='the-team-text-about' className='font-dm-mono font-normal text-[16px] lg:text-[20px] text-primary-black/70 text-left max-w-full lg:max-w-[550px]'>Behind every machine is a team of passionate individuals — engineers, farmers, designers, and visionaries — who share one purpose: to help growers thrive.  At DartAgro System, we value integrity, teamwork, and innovation. Our people are the engine that keeps us moving forward.</p>
           </div>
         </div>
-        <div id='the-team-cards-section' className="min-w-full mt-14 lg:mt-20">
+        <div id='the-team-cards-section' className="min-w-full mt-14 lg:mt-20 overflow-x-hidden">
             <div className="w-full overflow-x-auto flex items-start gap-4 carousel-container scrollbar-hide">
                 <TeamCard imageUrl='/images/team-2.jpg' name='Michael Larson' title='Chief Executive Officer (CEO)' />
                 <TeamCard imageUrl='/images/team-3.jpg' name='Sophia Turner' title='Chief Technology Officer (CTO)' />

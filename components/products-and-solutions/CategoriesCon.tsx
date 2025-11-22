@@ -35,7 +35,7 @@ const CategoriesCon = () => {
   return (
     <div id="categories-con" className="mt-6">
         <p id="category-text" className='font-dm-mono text-sm text-black font-normal'>Heavy-duty, high-performance equipment for efficient planting and harvesting.</p>
-        <div id='' className="min-w-full mt-6">
+        <div id='' className="min-w-full mt-6 overflow-x-hidden">
             <div className="w-full overflow-x-auto scrollbar-hide carousel-container">
                 <div className="w-fit flex gap-6">
                 <div  className="category-image min-w-[85%] lg:min-w-[413px] h-[380px] group overflow-hidden">

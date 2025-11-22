@@ -10,7 +10,7 @@ import Footer from "@/components/Footer";
 export default function About() {
 
   return (
-    <section className="relative w-full min-h-dvh opacity-100">
+    <section className="relative w-full min-h-[100vh] opacity-100 overflow-x-hidden">
       <AboutHeroSection />
       <WhoWeAre />
       <OurVision />

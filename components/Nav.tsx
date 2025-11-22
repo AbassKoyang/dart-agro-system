@@ -140,7 +140,7 @@ const handleMenuClick = () => {
                 onTransitionReady: slideInOut,
             })
         }} 
-          href='' className={`nav-link opacity-100 text-5xl lg:text-[80px] text-right font-medium ${pathname === '/' ? 'text-primary-green' : 'text-white'} hover:text-primary-green transition-colors duration-300 ease-in-out font-dm-mono lg:leading-[70px]`}>Home</Link>
+          href='' className={`nav-link opacity-100 text-4xl lg:text-[80px] text-right font-medium ${pathname === '/' ? 'text-primary-green' : 'text-white'} hover:text-primary-green transition-colors duration-300 ease-in-out font-dm-mono lg:leading-[70px]`}>Home</Link>
          <Link
          onClick={(e) => {
             e.preventDefault();
@@ -151,7 +151,7 @@ const handleMenuClick = () => {
                 onTransitionReady: slideInOut,
             })
         }} 
-          href='' className={`nav-link opacity-100 text-5xl lg:text-[80px] text-right font-medium ${pathname === '/products' ? 'text-primary-green' : 'text-white'} hover:text-primary-green transition-colors duration-300 ease-in-out font-dm-mono lg:leading-[70px]`}>Products & Solutions</Link>
+          href='' className={`nav-link opacity-100 text-4xl lg:text-[80px] text-right font-medium ${pathname === '/products' ? 'text-primary-green' : 'text-white'} hover:text-primary-green transition-colors duration-300 ease-in-out font-dm-mono lg:leading-[70px]`}>Products & Solutions</Link>
          <Link
          onClick={(e) => {
             e.preventDefault();
@@ -162,7 +162,7 @@ const handleMenuClick = () => {
                 onTransitionReady: slideInOut,
             })
         }} 
-          href='' className={`nav-link opacity-100 text-5xl lg:text-[80px] text-right font-medium ${pathname === '/about' ? 'text-primary-green' : 'text-white'} hover:text-primary-green transition-colors duration-300 ease-in-out font-dm-mono lg:leading-[70px]`}>About Us</Link>
+          href='' className={`nav-link opacity-100 text-4xl lg:text-[80px] text-right font-medium ${pathname === '/about' ? 'text-primary-green' : 'text-white'} hover:text-primary-green transition-colors duration-300 ease-in-out font-dm-mono lg:leading-[70px]`}>About Us</Link>
          <Link
          onClick={(e) => {
             e.preventDefault();
@@ -173,7 +173,7 @@ const handleMenuClick = () => {
                 onTransitionReady: slideInOut,
             })
         }} 
-         href='' className={`nav-link opacity-100 text-5xl lg:text-[80px] text-right font-medium ${pathname === '/contact' ? 'text-primary-green' : 'text-white'} hover:text-primary-green transition-colors duration-300 ease-in-out font-dm-mono lg:leading-[70px]`}>Contact Us</Link>
+         href='' className={`nav-link opacity-100 text-4xl lg:text-[80px] text-right font-medium ${pathname === '/contact' ? 'text-primary-green' : 'text-white'} hover:text-primary-green transition-colors duration-300 ease-in-out font-dm-mono lg:leading-[70px]`}>Contact Us</Link>
          </nav>
        )}
 
